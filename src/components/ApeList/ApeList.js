@@ -5,8 +5,8 @@ import "./ApeList.css";
 const ApeList = ({ collections, setSelectedApe }) => {
   return (
     <div className="apeList">
-      {collections.map((ape) => (
-        <div onClick={() => setSelectedApe(ape.token_id)}>
+      {collections.map((ape, index) => (
+        <div onClick={() => setSelectedApe(index)}>
           <CollectionCard
             key={ape.token_id}
             id={ape.token_id}
